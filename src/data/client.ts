@@ -11,7 +11,7 @@ export const SITE = {
 // ===== BUSINESS INFO =====
 export const BUSINESS = {
 	name: SITE.title,
-	email: "help@codestitch.app",
+	email: "help@sitevra.app",
 	phoneForTel: "555-779-4407",
 	phoneFormatted: "(555) 779-4407",
 	logo: "/assets/favicons/favicon.svg",
