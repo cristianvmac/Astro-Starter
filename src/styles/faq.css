@@ -1,0 +1,196 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #faq-1741 {
+    padding: var(--sectionPadding);
+    position: relative;
+  }
+
+  #faq-1741 .cs-container {
+    width: 100%;
+    max-width: 36.5rem;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  #faq-1741 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #faq-1741 .cs-title {
+    max-width: 15ch;
+    margin: 0 0 2rem;
+  }
+
+  #faq-1741 .cs-faq-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  #faq-1741 .cs-faq-item {
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    transition: border-bottom 0.3s;
+  }
+
+  #faq-1741 .cs-faq-item.active .cs-button {
+    background-color: var(--secondary);
+    color: var(--bodyTextColorWhite);
+  }
+
+  #faq-1741 .cs-faq-item.active .cs-button:before {
+    background-color: var(--bodyTextColorWhite);
+    transform: rotate(315deg);
+  }
+
+  #faq-1741 .cs-faq-item.active .cs-button:after {
+    background-color: var(--bodyTextColorWhite);
+    transform: rotate(-315deg);
+  }
+
+  #faq-1741 .cs-faq-item.active .cs-item-text {
+    height: auto;
+    padding: 1rem clamp(1rem, 2vw, 1.5rem);
+    opacity: 1;
+    border: 1px solid #e8e8e8;
+  }
+
+  #faq-1741 .cs-button {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: bold;
+    line-height: 1.2em;
+    text-align: left;
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3.25rem;
+    background-color: transparent;
+    color: var(--headerColor);
+    border: 1px solid #e8e8e8;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  #faq-1741 .cs-button:hover {
+    cursor: pointer;
+  }
+
+  #faq-1741 .cs-button:before {
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 1.125rem;
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+    transform-origin: left center;
+  }
+
+  #faq-1741 .cs-button:after {
+    content: "";
+    width: 0.5rem;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 1.3125rem;
+    transform: rotate(-45deg);
+    transition: transform 0.5s;
+    transform-origin: right center;
+  }
+
+  #faq-1741 .cs-item-text {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    color: var(--bodyTextColor);
+    opacity: 0;
+    transition: opacity 0.3s, padding-bottom 0.3s;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #faq-1741 .cs-gallery {
+    max-width: 107.5rem;
+  }
+
+  #faq-1741 .cs-picture {
+    grid-column: span 1;
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #faq-1741 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  #faq-1741 .cs-content {
+    text-align: left;
+    width: 40%;
+    align-items: flex-start;
+    flex: none;
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #faq-1741 .cs-title,
+  body.dark-mode #faq-1741 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+
+  body.dark-mode #faq-1741 .cs-topper {
+    color: var(--primaryLight);
+  }
+
+  body.dark-mode #faq-1741 .cs-faq-item.active .cs-button {
+    background-color: var(--secondary);
+    color: var(--bodyTextColorWhite);
+  }
+
+  body.dark-mode #faq-1741 .cs-faq-item.active .cs-button:before,
+  body.dark-mode #faq-1741 .cs-faq-item.active .cs-button:after {
+    background-color: var(--bodyTextColorWhite);
+  }
+
+  body.dark-mode #faq-1741 .cs-faq-item.active .cs-item-text {
+    padding-top: clamp(1.25rem, 1.3vw, 1.5rem);
+    border-color: var(--accent);
+  }
+
+  body.dark-mode #faq-1741 .cs-button {
+    color: var(--bodyTextColorWhite);
+    border-color: var(--accent);
+  }
+
+  body.dark-mode #faq-1741 .cs-button:before,
+  body.dark-mode #faq-1741 .cs-button:after {
+    background-color: var(--bodyTextColorWhite);
+  }
+}

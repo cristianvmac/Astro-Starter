@@ -1,0 +1,205 @@
+/*-- -------------------------- -->
+<---          Footer            -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    #cs-footer {
+        font-size: min(4vw, 1.2em);
+       padding: 5.25rem 0 1.25rem;
+      
+        background: #1c1c1c;
+    }
+
+    #cs-footer .cs-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    #cs-footer .cs-left {
+        text-align: center;
+        margin: auto;
+        margin-bottom: 3.125rem;
+    }
+
+    #cs-footer .cs-logo {
+        text-align: center;
+        width: auto;
+        height: 2em;
+        margin: auto;
+        margin-bottom: 1.875em;
+        display: inline-block;
+        color: #fff; /* Ensures white icon */
+    }
+
+    #cs-footer .cs-logo svg {
+        width: auto;
+        height: 100%;
+        display: block;
+    }
+
+    #cs-footer .cs-text {
+        font-size: 0.875rem;
+        line-height: 1.92857143;
+        text-align: center;
+        width: 100%;
+        max-width: 21.9285rem;
+        margin: auto;
+        color: #fff;
+        opacity: 0.9;
+    }
+
+    #cs-footer .cs-right {
+        width: 96%;
+        max-width: 25.4375rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    #cs-footer .cs-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        flex: 1 1 10rem; /* Allows columns to stack on very small screens */
+    }
+
+    #cs-footer .cs-title {
+        font-size: 1.125rem;
+        font-weight: bold;
+        line-height: 1.1666em;
+        text-transform: uppercase;
+        margin-bottom: 2.3125rem;
+        color: #fff;
+        position: relative;
+        display: block;
+    }
+
+    #cs-footer .cs-title:before {
+        content: "";
+        width: 6.0625rem;
+        height: 0.125rem;
+        background: var(--primary);
+        opacity: 1;
+        display: block;
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+    }
+
+    /* Nested Sublist Support */
+    #cs-footer .cs-sublist {
+        padding: 0;
+        margin: 0.5rem 0 0 1rem;
+        list-style: none;
+    }
+
+    #cs-footer li {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+        color: #fff;
+        opacity: 0.9;
+        list-style: none;
+    }
+
+    #cs-footer .cs-link {
+        line-height: 1.1666em;
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s;
+        display: inline-block;
+    }
+
+    #cs-footer .cs-link:hover {
+        color: var(--primary);
+    }
+
+    #cs-footer .cs-bottom {
+        font-size: 1rem;
+        line-height: 2.25rem;
+        text-align: center;
+        width: 96%;
+        margin: auto;
+        margin-top: 6.25rem;
+        color: #fff;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 2rem;
+    }
+
+    #cs-footer .cs-bottom a {
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--primary);
+    }
+
+    #cs-footer .cs-bottom a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+    #cs-footer {
+        font-size: min(1.2vw, 1em);
+    }
+
+    #cs-footer .cs-container {
+        width: 96%;
+        max-width: 82.5rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    #cs-footer .cs-left {
+        text-align: left;
+        width: 25.5625rem;
+        margin: 0;
+    }
+
+    #cs-footer .cs-logo {
+        margin-left: 0;
+        text-align: left;
+        height: 2.5rem;
+    }
+
+    #cs-footer .cs-text {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    #cs-footer .cs-right {
+        width: 38.0625rem;
+        max-width: none;
+        margin: 0;
+        gap: 0; /* Reset gap to use space-between */
+    }
+
+    #cs-footer .cs-link {
+        position: relative;
+    }
+
+    #cs-footer .cs-link:before {
+        content: "";
+        width: 0%;
+        height: 0.125rem;
+        background: var(--primary);
+        display: block;
+        position: absolute;
+        bottom: -0.1875rem;
+        left: 0;
+        transition: width 0.3s;
+    }
+
+    #cs-footer .cs-link:hover:before {
+        width: 100%;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode #cs-footer {
+    background: #061623;
+}
