@@ -1,0 +1,103 @@
+/* PAGE-SPECIFIC STYLES FOR THE PROJECTS PAGE */
+
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+	#gallery {
+		text-align: center;
+		padding: var(--sectionPadding);
+		position: relative;
+		overflow: hidden;
+	}
+
+	#gallery .cs-container {
+		width: 100%;
+		max-width: 82.625em; /* 1322 / 16 */
+		margin: auto;
+	}
+
+	#gallery .cs-image-group {
+		font-size: min(1.1vw, 1em);
+		width: 100%;
+		max-width: 82.625em;
+		margin: 0 auto 3.75rem; /* 60 / 16 */
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 1.875em; /* 30 / 16 */
+	}
+
+	#gallery .cs-row {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 1.875em;
+	}
+
+	#gallery .cs-picture {
+		display: block;
+		position: relative;
+	}
+
+	#gallery .cs-picture img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	/* Row 1 */
+	#gallery .cs-row-1 .cs-picture1 {
+		width: 26.25em;  /* 420 / 16 */
+		height: 35.4375em; /* 567 / 16 */
+	}
+
+	#gallery .cs-row-1 .cs-picture2 {
+		width: 26.25em;
+		height: 39.3125em; /* 629 / 16 */
+	}
+
+	#gallery .cs-row-1 .cs-picture3 {
+		width: 26.25em;
+		height: 32em; /* 512 / 16 */
+	}
+
+	/* Row 2 */
+	#gallery .cs-row-2 .cs-picture1 {
+		width: 26.25em;
+		height: 30.75em; /* 492 / 16 */
+	}
+
+	#gallery .cs-row-2 .cs-picture2 {
+		width: 26.25em;
+		height: 32.3125em; /* 517 / 16 */
+	}
+
+	#gallery .cs-row-2 .cs-picture3 {
+		width: 26.25em;
+		height: 39.3125em;
+	}
+
+	/* Row 3 */
+	#gallery .cs-row-3 .cs-picture1 {
+		width: 26.25em;
+		height: 39.0625em; /* 625 / 16 */
+	}
+
+	#gallery .cs-row-3 .cs-picture2 {
+		width: 26.25em;
+		height: 28.25em; /* 452 / 16 */
+	}
+
+	#gallery .cs-row-3 .cs-picture3 {
+		width: 26.25em;
+		height: 39.3125em;
+	}
+}

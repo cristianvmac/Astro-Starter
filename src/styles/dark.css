@@ -1,0 +1,50 @@
+/* DARK MODE AND TOGGLE STYLES */
+
+/*-- -------------------------- -->
+<---      Core Dark Styles      -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    /* Dark Mode Color Scheme */
+    :root {
+        --dark: #011912;
+        --medium: #01281d;
+        --accent: #334756;
+    }
+
+    body.dark-mode {
+        background-color: var(--dark);
+    }
+
+    body.dark-mode p,
+    body.dark-mode li,
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode h4,
+    body.dark-mode h5,
+    body.dark-mode h6 {
+        color: var(--bodyTextColorWhite);
+    }
+
+    /* Blog content dark mode styles */
+    body.dark-mode #blog-content h1,
+    body.dark-mode #blog-content h2,
+    body.dark-mode #blog-content h3,
+    body.dark-mode #blog-content h4,
+    body.dark-mode #blog-content h5,
+    body.dark-mode #blog-content h6 {
+        color: var(--bodyTextColorWhite);
+    }
+
+    body.dark-mode #blog-content p,
+    body.dark-mode #blog-content li {
+        color: var(--bodyTextColorWhite);
+        opacity: 0.8;
+    }
+
+    body.dark-mode #blog-content a {
+        color: var(--primary);
+    }
+}

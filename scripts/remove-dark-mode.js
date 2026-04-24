@@ -20,7 +20,7 @@ const DELETED_DIR = path.join(__dirname, 'deleted');
 
 // Files to move to scripts/deleted/
 const FILES_TO_MOVE = [
-  'src/styles/dark.less',
+  'src/styles/dark.css',
   'src/icons/moon.svg',
   'src/icons/sun.svg',
 ];
@@ -249,10 +249,10 @@ function collectFiles(relativeDir, extension) {
 async function main() {
   console.log('\nDark Mode Removal Script\n');
   console.log('This script will:');
-  console.log('  - Move DarkModeToggle/, dark.less, moon.svg, and sun.svg to scripts/deleted/');
+  console.log('  - Move DarkModeToggle/, dark.css, moon.svg, and sun.svg to scripts/deleted/');
   console.log('  - Remove the inline dark mode script from BaseLayout.astro');
   console.log('  - Remove the DarkModeToggle import and usage from both Header components');
-  console.log('  - Remove the dark.less import from BaseLayout.astro');
+  console.log('  - Remove the dark.css import from BaseLayout.astro');
   console.log('  - Remove the #dark-mode-toggle reference from nav.js');
   console.log('  - Remove body.dark-mode CSS blocks from all components, layouts, and pages');
   console.log('\nFiles can be recovered from scripts/deleted/ if needed.\n');
@@ -276,7 +276,7 @@ async function main() {
   console.log('\n--- Updating BaseLayout.astro ---');
   updateFile('src/layouts/BaseLayout.astro', [
     {
-      name: 'Remove dark.less import',
+      name: 'Remove dark.css import',
       pattern: /import\s+["']@styles\/dark\.less["'];\n?/g,
       replacement: '',
     },
@@ -328,8 +328,8 @@ async function main() {
   console.log('\n--- Cleaning Dark Mode Styles ---');
 
   // Global LESS files
-  cleanDarkStyles('src/styles/root.less');
-  cleanDarkStyles('src/styles/sidebar.less');
+  cleanDarkStyles('src/styles/root.css');
+  cleanDarkStyles('src/styles/sidebar.css');
 
   // All components (recursive scan)
   const componentFiles = collectFiles('src/components', '.astro');
@@ -354,7 +354,7 @@ async function main() {
   // Any other .less files that may exist
   const lessFiles = collectFiles('src/styles', '.less');
   for (const file of lessFiles) {
-    if (file === 'src/styles/root.less' || file === 'src/styles/sidebar.less') continue;
+    if (file === 'src/styles/root.css' || file === 'src/styles/') continue;
     cleanDarkStyles(file);
   }
 
