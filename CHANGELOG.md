@@ -105,8 +105,8 @@ The blog has received new components and some refactoring.
     - `BlogRecentArticles.astro` and `BlogRecentArticlesWithSidebar` are used to wrap recent articles with or without a sidebar widget, and are used in `src/blog/index.astro`
     - Their respective styles are moved from `blog.less` and now scoped to the layout for increased readability and maintainability
   - `blog.less` has been removed
-  - `markdown.less` has been created and holds all the styles for markdown content
-  - `sidebar.less` has been created and holds the styles for the sidebar widgets, shared across mutiple components.
+  - `markdown.css` has been created and holds all the styles for markdown content
+  - `sidebar.css` has been created and holds the styles for the sidebar widgets, shared across mutiple components.
   - New component: TableOfContents.astro. Is used in a sidebar on the individual posts and allows easy navigation within the article.
 - Baselayout now has typed Props and uses an optional preloadedImage prop consumed by: 1. the preload link and 2. the og tags for social sharing.
   For example, the cover image on a blog page passed to Baselayout will be used as the social image
