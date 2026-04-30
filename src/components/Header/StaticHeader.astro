@@ -12,18 +12,30 @@
  */
 
 // Utils
+import { Image } from 'astro:assets';
+import logo from '@assets/images/header/logo-black.png';
 import { Icon } from "astro-icon/components";
 import "@styles/staticheader.css";
 // Components
 import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
+
 ---
 
 <header id="cs-navigation">
 	<div class="cs-container">
 		<!--Nav Logo-->
-		<a href="/" class="cs-logo" aria-label="Return to [Company Name] Home page">
-			<Icon name="logo-black" />
+		<!-- Use  <Image /> (Astro image component) -->
+		<a href="/" class="cs-logo" aria-label="Return to Home">
+  			<Image src={logo} alt="Company Logo" width={260} height={35} />
 		</a>
+
+		<!-- OR -->
+
+		<!-- <Icon /> (from astro-icon) -->
+		<!--<a href="/" class="cs-logo" aria-label="Return to [Company Name] Home page">
+			<Icon name="logo-black" />
+		</a>-->
+		
 		<!--Navigation List-->
 		<nav class="cs-nav" aria-label="main navigation">
 			<!--Mobile Nav Toggle-->
@@ -46,21 +58,27 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 					<!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
 					<!-- Note: When copying this dropdown, update the id attribute with an appropriate name (e.g., "services-dropdown-toggle", "products-dropdown-toggle") and ensure the aria-labelledby attribute on the ul matches the button's id -->
 					<li class="cs-li cs-dropdown">
-						<button class:list={["cs-li-link cs-dropdown-toggle", { "cs-active": Astro.url.pathname.includes("/projects/") }]} aria-haspopup="menu" aria-expanded="false" id="projects-dropdown-toggle">
-							Projects
+						<button class:list={["cs-li-link cs-dropdown-toggle", { "cs-active": Astro.url.pathname.includes("/services/") }]} aria-haspopup="menu" aria-expanded="false" id="projects-dropdown-toggle">
+							Services
 							<Icon name="mdi--caret" class="cs-drop-icon" />
 						</button>
 						<ul class="cs-drop-ul" aria-labelledby="projects-dropdown-toggle">
 							<li class="cs-drop-li">
-								<a href="/projects/project-1/" class="cs-li-link cs-drop-link" aria-current={Astro.url.pathname === "/projects/project-1/" ? "page" : undefined}>Project 1</a>
+								<a href="/services/service-1/" class="cs-li-link cs-drop-link" aria-current={Astro.url.pathname === "/services/service-1/" ? "page" : undefined}>Services 1</a>
 							</li>
 							<li class="cs-drop-li">
-								<a href="/projects/project-2/" class="cs-li-link cs-drop-link" aria-current={Astro.url.pathname === "/projects/project-2/" ? "page" : undefined}>Project 2</a>
+								<a href="/services/service-2/" class="cs-li-link cs-drop-link" aria-current={Astro.url.pathname === "/services/service-2/" ? "page" : undefined}>Service2</a>
 							</li>
 						</ul>
 					</li>
 					<li class="cs-li">
+						<a href="/portfolio" class:list={["cs-li-link", { "cs-active": Astro.url.pathname === "/portfolio/" }]} aria-current={Astro.url.pathname === "/portfolio/" ? "page" : undefined}> Portfolio </a>
+					</li>
+					<li class="cs-li">
 						<a href="/reviews/" class:list={["cs-li-link", { "cs-active": Astro.url.pathname === "/reviews/" }]} aria-current={Astro.url.pathname === "/reviews/" ? "page" : undefined}> Reviews </a>
+					</li>
+					<li class="cs-li">
+						<a href="/faq/" class:list={["cs-li-link", { "cs-active": Astro.url.pathname === "/faq/" }]} aria-current={Astro.url.pathname === "/faq/" ? "page" : undefined}> FAQ</a>
 					</li>
 					<li class="cs-li">
 						<a href="/blog/" class:list={["cs-li-link", { "cs-active": Astro.url.pathname === "/blog/" }]} aria-current={Astro.url.pathname === "/blog/" ? "page" : undefined}> Blog </a>
