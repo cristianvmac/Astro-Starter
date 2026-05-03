@@ -13,7 +13,7 @@
 
 // Utils
 import { Image } from 'astro:assets';
-import logo from '@assets/images/header/logo-black.png';
+import logo from '@assets/images/header/logo.svg';
 import { Icon } from "astro-icon/components";
 import "@styles/staticheader.css";
 // Components
@@ -26,10 +26,12 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 		<!--Nav Logo-->
 		<!-- Use  <Image /> (Astro image component) -->
 		<a href="/" class="cs-logo" aria-label="Return to Home">
-  			<Image src={logo} alt="Company Logo" width={260} height={35} />
+  			<Image src={logo} alt="Company Logo" width={260} height={135} />
 		</a>
 
 		<!-- OR -->
+           <!-- PUT 'A' AS LOGO and FOR ELEVENTY 'E'	 -->
+
 
 		<!-- <Icon /> (from astro-icon) -->
 		<!--<a href="/" class="cs-logo" aria-label="Return to [Company Name] Home page">
