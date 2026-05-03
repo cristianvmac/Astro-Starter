@@ -43,10 +43,11 @@
     }
 
     #sbs .cs-picture1 {
-        width: 32.625em;
+        width: 39.625em;
         height: 36.3125em;
         top: 0;
         left: 0;
+      /*  margin-left: 1rem;*/
     }
 
     #sbs .cs-picture2 {
