@@ -4,22 +4,22 @@ export const SITE = {
 	tagline: "Professional Web Design Services",
 	description: "Code Stitch Web Designs offers top-tier web design and development services to meet all your project needs. Start exploring and contact our team for superior quality and reliability.",
 	url: "https://www.yourwebsite.com",
-	author: "Code Stitch Team",
+	author: "Cotmeana",
 	locale: "en",
 };
 
 // ===== BUSINESS INFO =====
 export const BUSINESS = {
 	name: SITE.title,
-	email: "help@sitevra.app",
+	email: "help@examplecompany.app",
 	phoneForTel: "555-779-4407",
 	phoneFormatted: "(555) 779-4407",
 	logo: "/assets/favicons/favicon.svg",
 	address: {
 		lineOne: "First Address Line",
 		lineTwo: "Second Address Line",
-		city: "Denver",
-		state: "CO",
+		city: "Springfield",
+		state: "OH",
 		zip: "80206",
 		mapLink: "https://goo.gl/maps/UAQn4vuGDiwv7DV39",
 	},

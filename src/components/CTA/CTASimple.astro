@@ -8,19 +8,20 @@ import { Picture } from "astro:assets";
 import "@styles/cta.css";
 
 // Images
-import ctaImage from "@assets/images/CTA/cabinets2.jpg";
+import ctaImage from "@assets/images/CTA/banner3.jpg";
 ---
 
 <section id="cta">
-	<div class="container">
-		<h2 class="title">
-			Get It Done
-			<br />
-			With Us Today
-		</h2>
-		<p>Say something catchy, informative, and encouraging to click the button to go to the contact page. I like to add these to the bottom of all pages.</p>
-		<a href="/contact/" class="cs-button-solid">Get an Estimate Now</a>
-	</div>
+	<div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Us</span>
+            <h2 class="cs-title">Get It Done With Us Today</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis at sit pellentesque molestie.  Diam, adipiscing ultrices eu turpis gravida.
+            </p>
+            <a href="" class="cs-button-solid">Gret A Free Quote</a>
+        </div>
+    </div>
 	<Picture src={ctaImage} alt="" layout="full-width" formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture" }} />
 </section>
 

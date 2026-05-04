@@ -1,91 +1,101 @@
 ---
 // Utils
-import { Icon } from "astro-icon/components";
 import { getCurrentYear } from "@js/utils";
 import "@styles/footer.css";
-
+import { Image } from 'astro:assets';
+import logo from '@assets/images/footer/logo-white.svg';
+import { Icon } from "astro-icon/components";
+import googleIcon from "@assets/images/footer/google.svg";
+import facebookIcon from "@assets/images/footer/facebook.svg";
+import instagramIcon from "@assets/images/footer/instagram.svg";
 // Data
 import { BUSINESS } from "@data/client";
 
 const currentYear = getCurrentYear();
 ---
 
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
 <footer id="cs-footer">
-  <div class="cs-container">
-
-    <!-- LEFT -->
-    <div class="cs-left">
-      <a class="cs-logo" href="/" aria-label="Return home">
-        <Icon name="logo-white" />
-      </a>
-      <p class="cs-text">
-        Extra content if you need it. Remove if not needed.
-      </p>
+    <div class="cs-container">
+        <!-- Logo Group -->
+        <div class="cs-logo-group">
+           <!--  <a aria-label="go back to home" class="cs-logo" href="/">
+                <img class="cs-logo-img" loading="lazy" decoding="async" src="/assets/images/footer/logo-white.svg" alt="logo" width="240" height="32">
+            </a> -->
+            <a href="/" class="cs-logo" aria-label="Return to Home">
+  			      <Image src={logo} alt="Company Logo" width={260} height={135} />
+		        </a>
+            <p class="cs-text">
+                Extra content if you need it, if not you can delete this whole p tag. I usually do.
+            </p>
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="visit google profile" href="" target="_blank" rel="noopener">
+                    <Image src={googleIcon} alt="Google" width={11} height={11} />
+                </a>
+                <a class="cs-social-link" aria-label="visit facebook profile" href="" target="_blank" rel="noopener">
+                    <Image src={facebookIcon} alt="Google" width={11} height={11} />
+                </a>
+                <a class="cs-social-link" aria-label="visit instagram profile" href="" target="_blank" rel="noopener">
+                    <Image src={instagramIcon} alt="Google" width={11} height={11} />
+                </a>
+            </div>
+        </div>
+        <!-- Links -->
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Information</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/">Home</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/about/">About</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/portfolio/">Portfolio</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/reviews/">Reviews</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/contact/">Contact</a>
+            </li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li">
+                <span class="cs-header">Services</span>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/serviceone/">Service One</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/servicetwo/">Service Two</a>
+            </li>
+            <li class="cs-nav-li">
+                <a class="cs-nav-link" href="/servicethree/">Service Three</a>
+            </li>
+        </ul>
+        <!-- Contact Info -->
+        <ul class="cs-contact">
+            <li class="cs-nav-li">
+                <span class="cs-header">Contact</span>
+            </li>
+            <li class="cs-contact-li">
+                <a class="cs-contact-link cs-address" href="{{ BUSINESS.address.mapLink }}" target="_blank" rel="noopener">
+                    { BUSINESS.address.lineOne }, <br>
+                    { BUSINESS.address.lineTwo }, <br>
+                    { BUSINESS.address.city }, { BUSINESS.address.state }, { BUSINESS.address.zip }
+                </a>
+            </li>
+            <li class="cs-contact-li">
+                <a class="cs-contact-link" href="tel:{{ BUSINESS.phoneForTel }}">{ BUSINESS.phoneFormatted }</a>
+            </li>
+            <li class="cs-contact-li">
+                <a class="cs-contact-link" href="mailto:{{ BUSINESS.email }}">{ BUSINESS.email }</a>
+            </li>
+        </ul>
     </div>
-
-    <!-- RIGHT -->
-    <div class="cs-right">
-
-      <!-- INFORMATION -->
-      <ul class="cs-list">
-        <li class="cs-title">Information</li>
-
-        <li><a href="/" class="cs-link">Home</a></li>
-        <li><a href="/about/" class="cs-link">About Us</a></li>
-
-        <li>
-          <span class="cs-link">Projects</span>
-          <ul class="cs-sublist">
-            <li><a href="/projects/project-1/" class="cs-link">Project 1</a></li>
-            <li><a href="/projects/project-2/" class="cs-link">Project 2</a></li>
-          </ul>
-        </li>
-
-        <li><a href="/reviews/" class="cs-link">Reviews</a></li>
-        <li><a href="/blog/" class="cs-link">Blog</a></li>
-      </ul>
-
-      <!-- SERVICES -->
-      <ul class="cs-list">
-        <li class="cs-title">Services</li>
-        <li>Service 1</li>
-        <li>Service 2</li>
-        <li>Service 3</li>
-        <li>Service 4</li>
-      </ul>
-
-      <!-- CONTACT -->
-      <ul class="cs-list">
-        <li class="cs-title">Contact</li>
-
-        <li>
-          <a href="/contact/" class="cs-link">
-            {BUSINESS.address.lineOne}<br />
-            {BUSINESS.address.lineTwo}<br />
-            {BUSINESS.address.city} {BUSINESS.address.state} {BUSINESS.address.zip}
-          </a>
-        </li>
-
-        <li>
-          <a href={`tel:${BUSINESS.phoneForTel}`} class="cs-link">
-            T: {BUSINESS.phoneFormatted}
-          </a>
-        </li>
-
-        <li>
-          <a href={`mailto:${BUSINESS.email}`} class="cs-link">
-            {BUSINESS.email}
-          </a>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-
-  <!-- BOTTOM -->
-  <div class="cs-bottom">
-    <span>Designed and Hand Coded by</span>
-    <a href="/" target="_blank" rel="noopener">Your Company</a>
-    <span> © {currentYear}</span>
-  </div>
 </footer>
