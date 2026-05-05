@@ -16,6 +16,8 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
+    height: 3.75rem; /* or whatever your desired mobile nav height is */
+
   }
 
   #cs-navigation::before {
@@ -56,6 +58,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    height: 100%; /* lets container fill the fixed nav height */
+
   }
 
   #cs-navigation .cs-logo {
@@ -69,6 +73,9 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
+    /* replace height: 100% with a max-height so it doesn't grow */
+    height: auto;
+    max-height: 2.5rem; /* adjust to your logo's natural size */
   }
 
   #cs-navigation .cs-logo svg {

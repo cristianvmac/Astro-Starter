@@ -6,8 +6,11 @@
 @media only screen and (min-width: 0px) {
 
   #cs-footer {
-    padding: var(--sectionPadding);
+   /* padding: var(--sectionPadding);*/
+    /*padding: 0.2rem 1rem;*/
     background-color: #1a1a1a;
+
+    padding: 2rem 2rem;
   
 
   .cs-container {
@@ -20,6 +23,8 @@
     flex-wrap: wrap;
     column-gap: 5.5rem; /* 88/16 */
     row-gap: 2rem; /* 32/16 */
+
+    padding: 0 1rem; /* add this */
   }
 
   .cs-logo-group {
@@ -29,7 +34,8 @@
 
   .cs-logo {
     width: clamp(13.125rem, 8vw, 15rem);
-    height: auto;
+   /* height: auto;*/
+    height: 5rem;
     display: block;
     margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
   }
@@ -46,6 +52,7 @@
   .cs-text {
     color: var(--bodyTextColorWhite);
     margin-bottom: 1rem; /* 16/16 */
+   
   }
 
  .cs-social {
