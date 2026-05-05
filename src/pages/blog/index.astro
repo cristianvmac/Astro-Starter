@@ -15,7 +15,7 @@ import BlogRecentArticlesWithSidebar from "@layouts/BlogRecentArticlesWithSideba
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
-import placeholderImage from "@assets/images/placeholder.jpg";
+import placeholderImage from "@assets/images/banner.jpg";
 const placeholderOptimizedImage = await getImage({ src: placeholderImage, format: "webp" });
 
 const posts = await getCollection("blog");
