@@ -1,7 +1,7 @@
 ---
 // Utils
 import { Picture, getImage } from "astro:assets";
-import "../styles/project-1.css";
+import "../styles/service-1.css";
 // Components
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
@@ -29,37 +29,40 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 	<Banner title="Project 1" image={optimizedImage} />
 
 	<!-- ============================================ -->
-	<!--                   Gallery                    -->
-	<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
 
-	<section id="gallery">
-		<div class="cs-container">
-			<div class="cs-image-group">
-				<!-- Row 1-->
-				<div class="cs-row cs-row-1">
-					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port1} alt="new hallway" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port4} alt="new home construction" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port7} alt="building a new wall" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
-				</div>
-				<!-- Row 2 -->
-				<div class="cs-row cs-row-2">
-					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port2} alt="new kitchen" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port5} alt="apartment addition" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port8} alt="new kitchen cabinets" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
-				</div>
-				<!-- Row 3 -->
-				<div class="cs-row cs-row-3">
-					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port3} alt="new kitchen" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port6} alt="apartment addition" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port9} alt="new kitchen cabinets" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
-				</div>
-			</div>
-			<a href="/contact/" class="cs-button-solid">Get Free Quote</a>
-		</div>
-	</section>
+<section id="sbs"> 
+    <div class="cs-container"> 
+        <!-- Left Content Section--> 
+        <div class="cs-content"> 
+            <span class="cs-topper">Featured Service</span> 
+            <h2 class="cs-title">Dolor scelerisque proin in vulputate</h2> 
+            <p class="cs-text"> 
+                 Lorem ipsum dolor sit amet, bibendum dolor maecenas ipsum, in turpis sem. Nullam pede est vestibulum adipiscing suspendisse purus. Massa fusce phasellus et. Eros elit aliquam amet, placerat donec, dui dolor nec suscipit quis. Proin mattis ut nulla a mauris vivamus, varius aliquet vel quam, habitasse sed, curabitur arcu sed sollicitudin. Pede orci, nibh ut congue lorem platea, cras feugiat et ornare primis praesent euismod, ac ipsum. 
+            </p> 
+            <div class="cs-features"> 
+                <h3 class="cs-h3">Key Features:</h3> 
+                <ul class="cs-ul"> 
+                    <li class="cs-li">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis</li> 
+                    <li class="cs-li">Nemo enim ipsam voluptatem, quia voluptas sit</li> 
+                    <li class="cs-li">Ut enim ad minima veniam</li> 
+                </ul> 
+            </div> 
+            <a class="cs-button-solid" aria-label="learn more about our programs" href="">Read More</a> 
+        </div> 
+        <!-- Right Image Section --> 
+        <div class="cs-image-group"> 
+            
+            <!--Image--> 
+            <picture class="cs-picture"> 
+    			<source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80"> 
+    			<source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80"> 
+    			<img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80" alt="modern glass office building architecture" width="630" height="630" aria-hidden="true"> 
+			</picture>
+        </div> 
+    </div> 
+</section>
 	<CTA />
 </BaseLayout>
 

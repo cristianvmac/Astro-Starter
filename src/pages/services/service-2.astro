@@ -1,7 +1,7 @@
 ---
 // Utils
 import { Picture, getImage } from "astro:assets";
-import "../styles/project-2.css";
+import "../styles/service-2.css";
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
@@ -29,37 +29,48 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 	<Banner title="Project 2" image={optimizedImage} />
 
 	<!-- ============================================ -->
-	<!--                   Gallery                    -->
-	<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
 
-	<section id="gallery">
-		<div class="cs-container">
-			<div class="cs-image-group">
-				<!-- Row 1-->
-				<div class="cs-row cs-row-1">
-					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port1} alt="new hallway" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port4} alt="new home construction" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port7} alt="building a new wall" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
-				</div>
-				<!-- Row 2 -->
-				<div class="cs-row cs-row-2">
-					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port2} alt="new kitchen" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port5} alt="apartment addition" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port8} alt="new kitchen cabinets" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
-				</div>
-				<!-- Row 3 -->
-				<div class="cs-row cs-row-3">
-					<!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-					<Picture src={port3} alt="new kitchen" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture1" }} />
-					<Picture src={port6} alt="apartment addition" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture2" }} />
-					<Picture src={port9} alt="new kitchen cabinets" width={400} height={560} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture cs-picture3" }} />
-				</div>
-			</div>
-			<a href="/contact/" class="cs-button-solid">Get Free Quote</a>
-		</div>
-	</section>
+<section id="services">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Expertise</span>
+            <h2 class="cs-title">Et harum quidem rerum facilis</h2>
+            <p class="cs-text">
+                Lorem fames nibh, quam justo nulla elementum ante ligula integer, cum magna ac minus odio. Ipsum sed semper sem libero lectus urna, cras arcu conubia molestie non. Sollicitudin fermentum tincidunt scelerisque vestibulum. Congue lectus mi.
+            </p>
+            <a href="/portfolio/" class="cs-button-solid">Explore Our Work</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">Proin iaculis ipsum </h3>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80">
+                    <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="New home construction framing" width="275" height="132">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3"> Lorem fames nibh</h3>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&q=80">
+                    <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=900&q=80">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&q=80" alt="Home renovation in progress" width="275" height="132">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Congue lectus mi.</h3>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=600&q=80">
+                    <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=900&q=80">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=600&q=80" alt="Modern home addition and extension" width="275" height="132">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+	
 	<CTA />
 </BaseLayout>
 
