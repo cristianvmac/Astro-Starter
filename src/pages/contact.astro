@@ -12,7 +12,7 @@ import { BUSINESS } from "@data/client";
 
 // Images
 import landingImage from "@assets/images/banner.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
-import skyscraperImage from "@assets/images/gallery/skyscraper.jpg";
+import skyscraperImage from "@assets/images/contact/contact.jpg";
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
@@ -71,7 +71,7 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 				</a>
 
 				<!-- Background Image-->
-				<Picture src={skyscraperImage} alt="building" width={2500} height={1667} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-bg-picture" }} />
+				<Picture src={skyscraperImage} alt="building" width={1000} height={1667} formats={["avif", "webp"]} pictureAttributes={{ class: "cs-bg-picture" }} />
 			</div>
 		</div>
 	</section>
