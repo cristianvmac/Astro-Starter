@@ -1,8 +1,8 @@
 // ===== SITE CONSTANTS =====
 export const SITE = {
-	title: "Code Stitch Web Designs",
-	tagline: "Professional Web Design Services",
-	description: "Code Stitch Web Designs offers top-tier web design and development services to meet all your project needs. Start exploring and contact our team for superior quality and reliability.",
+	title: "Astro Starter Template",
+	tagline: "Boilerplate for Astro",
+	description: "Astro Starter offers top-tier web design and development services to meet all your project needs. Start exploring and contact our team for superior quality and reliability.",
 	url: "https://www.yourwebsite.com",
 	author: "Cotmeana",
 	locale: "en",
@@ -12,15 +12,15 @@ export const SITE = {
 export const BUSINESS = {
 	name: SITE.title,
 	email: "help@examplecompany.app",
-	phoneForTel: "555-779-4407",
-	phoneFormatted: "(555) 779-4407",
+	phoneForTel: "555-557-6614",
+	phoneFormatted: "(555) 557-6614",
 	logo: "/assets/favicons/favicon.svg",
 	address: {
 		lineOne: "First Address Line",
 		lineTwo: "Second Address Line",
 		city: "Springfield",
 		state: "OH",
-		zip: "80206",
+		zip: "12345",
 		mapLink: "https://goo.gl/maps/UAQn4vuGDiwv7DV39",
 	},
 	socials: {
