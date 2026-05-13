@@ -207,7 +207,8 @@
 
   #cs-navigation .cs-li-link {
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-    color: inherit;
+    /*color: inherit;*/
+    color: var(--headerColor);
     line-height: 1.2em;
     text-decoration: none;
     margin: 0;
@@ -236,7 +237,7 @@
   }
 }
 
-/* Dark Mode — Mobile */
+/* Dark Mode — Mobile 
 @media only screen and (max-width: 63.9375rem) {
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
@@ -257,7 +258,7 @@
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
   }
-}
+}*/
 
 /* ==========================================================================
    Navigation Dropdown — Mobile (max-width: 1023px)
@@ -455,7 +456,7 @@
   }
 }
 
-/* Dark Mode — Dropdown (all widths) */
+/* Dark Mode — Dropdown (all widths)
 @media only screen and (min-width: 0rem) {
   body.dark-mode #cs-navigation .cs-drop-ul {
     background-color: var(--dark);
@@ -468,7 +469,7 @@
   body.dark-mode #cs-navigation .cs-drop-icon {
     filter: grayscale(1) brightness(1000%);
   }
-}
+} */
 
 /* ==========================================================================
    Desktop Navigation — min-width: 1024px (64rem)
@@ -566,7 +567,7 @@
   }
 }
 
-/* Dark Mode — Desktop */
+/* Dark Mode — Desktop 
 @media only screen and (min-width: 64rem) {
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
@@ -583,4 +584,4 @@
   body.dark-mode #cs-navigation .cs-li-link::before {
     background-color: var(--primaryLight);
   }
-}
+}*/

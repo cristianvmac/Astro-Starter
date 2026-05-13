@@ -1,8 +1,8 @@
 ---
 title: Images in blog posts
 description: How to use images in blog posts
-author: Code Stitch
-date: 2024-06-08T15:27:34.591Z
+author: AuthorX
+date: 2026-05-08T15:27:34.591Z
 image: "@assets/images/blog/placeholder.jpg"
 imageAlt: Bathroom
 isFeatured: false
