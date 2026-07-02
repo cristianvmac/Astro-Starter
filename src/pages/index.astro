@@ -14,12 +14,12 @@ import FAQ from "@components/FAQ/FAQ.astro";
 import CTASimple from "@components/CTA/CTASimple.astro";
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Banner (for rendering)
-import heroImage from "@assets/images/hero/hero3.jpg";
+import heroImage from "@assets/images/hero/hero.webp";
 
 const optimizedHeroImage = await getImage({ src: heroImage, format: "webp" });
 ---
 
-<BaseLayout title="Boilerplate" description="Meta description for the page" heroImage={optimizedHeroImage}>
+<BaseLayout title="Astro Starter" description="Meta description for the page" heroImage={optimizedHeroImage}>
 	<Hero image={optimizedHeroImage} />
 	<Services />
 	<SideBySide />

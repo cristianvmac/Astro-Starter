@@ -21,7 +21,7 @@ const { image } = Astro.props as Props;
 <section id="hero">
 	<div class="cs-container">
 		<div class="cs-flex-group">
-			<span class="cs-topper">Sitevra presents</span>
+			<span class="cs-topper">Websitero presents</span>
 			<h1 class="cs-title">Astro Starter <br /> Template</h1>
 			<p class="cs-text">This starter kit gives you a ready-made website setup built with Astro, so you can reuse sections, manage your content in one place, and grow your site easily. It also includes a built-in blog with Decap CMS.</p>
 			<a href="/about/" class="cs-button-solid">Explore More</a>
@@ -33,7 +33,7 @@ const { image } = Astro.props as Props;
 	</div>
 
 	<!-- Using the preloaded image from the props -->
-	<Picture src={image.src} alt="new home" width={image.attributes.width} height={image.attributes.height} formats={["avif", "webp"]} priority pictureAttributes={{ class: "cs-picture" }} />
+	<Picture src={image.src} alt="hero background img " width={image.attributes.width} height={image.attributes.height} formats={["avif", "webp"]} priority pictureAttributes={{ class: "cs-picture" }} />
 </section>
 
 

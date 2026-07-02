@@ -1,7 +1,7 @@
 ---
 // Utils
 import { Picture, getImage } from "astro:assets";
-import "./styles/contact.css";
+import "../styles/contact.css";
 
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
@@ -11,8 +11,8 @@ import Banner from "@components/Banner/Banner.astro";
 import { BUSINESS } from "@data/client";
 
 // Images
-import landingImage from "@assets/images/banner.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
-import skyscraperImage from "@assets/images/contact/contact.jpg";
+import landingImage from "@assets/images/banner.webp"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+import skyscraperImage from "@assets/images/contact/contact.webp";
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 

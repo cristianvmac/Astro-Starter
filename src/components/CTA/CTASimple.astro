@@ -8,7 +8,7 @@ import { Picture } from "astro:assets";
 import "@styles/cta.css";
 
 // Images
-import ctaImage from "@assets/images/CTA/cta3.jpg";
+import ctaImage from "@assets/images/CTA/cta.jpg";
 ---
 
 <section id="cta">
@@ -22,6 +22,6 @@ import ctaImage from "@assets/images/CTA/cta3.jpg";
             <a href="" class="cs-button-solid">Gret A Free Quote</a>
         </div>
     </div>
-	<Picture src={ctaImage} alt="" layout="full-width" formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture" }} />
+	<Picture src={ctaImage} alt="cta img simple" layout="full-width" formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture" }} />
 </section>
 

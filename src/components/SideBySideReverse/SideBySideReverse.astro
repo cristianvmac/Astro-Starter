@@ -5,8 +5,7 @@
 import { Picture } from "astro:assets";
 import "@styles/sidebysidereverse.css";
 // Images
-import sbsreverse from "@assets/images/services/sbsreverse.jpg";
-import cabinets2 from "@assets/images/services/cabinets2.jpg";
+import sbsreverse from "@assets/images/services/sbsreverse.webp";
 ---
 
 <section id="sbs-r">
@@ -15,22 +14,12 @@ import cabinets2 from "@assets/images/services/cabinets2.jpg";
     <div class="cs-left">
       <Picture
         src={sbsreverse}
-        alt="house"
+        alt="sbs reverse img"
         width={400}
         height={560}
         formats={['avif', 'webp']}
         pictureAttributes={{ class: "cs-picture cs-picture1" }}
       />
-     <!--  
-      <Picture
-        src={cabinets2}
-        alt="cabinets"
-        width={400}
-        height={560}
-        formats={['avif', 'webp']}
-        pictureAttributes={{ class: "cs-picture cs-picture2" }}
-      />
-      -->
     </div>
     <!-- Right Content Section-->
     <div class="cs-right">

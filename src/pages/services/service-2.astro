@@ -8,16 +8,12 @@ import Banner from "@components/Banner/Banner.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
-import landingImage from "@assets/images/banner.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
-import port1 from "@assets/images/projects/port1.jpg";
-import port2 from "@assets/images/projects/port2.jpg";
-import port3 from "@assets/images/projects/port3.jpg";
-import port4 from "@assets/images/projects/port4.jpg";
-import port5 from "@assets/images/projects/port5.jpg";
-import port6 from "@assets/images/projects/port6.jpg";
-import port7 from "@assets/images/projects/port7.jpg";
-import port8 from "@assets/images/projects/port8.jpg";
-import port9 from "@assets/images/projects/port9.jpg";
+import landingImage from "@assets/images/banner.webp"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+
+import serviceTwoOneImg from "@assets/images/services/ServiceTwoOne.webp";
+import serviceTwoTwoImg from "@assets/images/services/ServiceTwoTwo.webp";
+import serviceTwoThreeImg from "@assets/images/services/ServiceTwoThree.webp";
+
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 ---
 
@@ -45,27 +41,15 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
         <ul class="cs-card-group">
             <li class="cs-item">
                 <h3 class="cs-h3">Proin iaculis ipsum </h3>
-                <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80">
-                    <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="New home construction framing" width="275" height="132">
-                </picture>
+                <Picture src={serviceTwoOneImg} alt="New home construction framing" layout="full-width" formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture" }} />
             </li>
             <li class="cs-item">
                 <h3 class="cs-h3"> Lorem fames nibh</h3>
-                <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&q=80">
-                    <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=900&q=80">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&q=80" alt="Home renovation in progress" width="275" height="132">
-                </picture>
+                <Picture src={serviceTwoTwoImg} alt="Home renovation in progress" layout="full-width" formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture" }} />
             </li>
             <li class="cs-item">
                 <h3 class="cs-h3">Congue lectus mi.</h3>
-                <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=600&q=80">
-                    <source media="(min-width: 601px)" srcset="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=900&q=80">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=600&q=80" alt="Modern home addition and extension" width="275" height="132">
-                </picture>
+                <Picture src={serviceTwoThreeImg} alt="Modern home addition and extension" layout="full-width" formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture" }} />
             </li>
         </ul>
     </div>
