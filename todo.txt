@@ -1,0 +1,4 @@
+# add numbers of both Belgium and Netherlands on Contact, 
+# perhaps change logo color
+# optimize the images
+# check for errors one more time, i think its a mistake in nl/fr version on landing page
